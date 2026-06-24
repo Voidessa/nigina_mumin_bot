@@ -147,20 +147,26 @@ bot.callbackQuery('check_subscription', async (ctx) => {
 
 // Send Welcome Message
 async function sendWelcome(ctx: any, lang: string) {
-    const siteUrl = process.env.SITE_URL || 'https://site--niginamumin--dqxfmk9z2msz.code.run/';
     const keyboard = new InlineKeyboard()
-        .text(t('btn_watch_excerpt', lang), 'watch_excerpt')
+        .text(t('btn_watch_vsl', lang), 'watch_vsl')
         .row()
-        .url(t('btn_go_to_site', lang), siteUrl);
+        .url(t('btn_go_to_site', lang), 'https://site--niginamumin--dqxfmk9z2msz.code.run/');
 
     await ctx.reply(t('welcome_message', lang), { parse_mode: 'Markdown', reply_markup: keyboard });
 }
 
-// Callback: Watch Excerpt
-bot.callbackQuery('watch_excerpt', async (ctx) => {
+// Callback: Watch VSL
+bot.callbackQuery('watch_vsl', async (ctx) => {
     const userId = ctx.from.id;
     const lang = await getUserLanguage(userId);
-    await ctx.reply(t('excerpt_placeholder_message', lang), { parse_mode: 'Markdown' });
+    
+    // VSL URL could also be localized if needed, but assuming single URL for now or simple page
+    const vslUrl = 'https://youtu.be/Ix0WLZYd4BI?si=oGuXB335w1Uh4kAs'; 
+    
+    const vslKeyboard = new InlineKeyboard()
+        .url(t('btn_go_to_vsl', lang), vslUrl);
+
+    await ctx.reply(t('vsl_link_text', lang), { parse_mode: 'Markdown', reply_markup: vslKeyboard });
     await ctx.answerCallbackQuery();
 });
 
