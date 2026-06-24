@@ -6,7 +6,7 @@ const token = process.env.BOT_TOKEN;
 if (!token) throw new Error('BOT_TOKEN is unset');
 
 export const bot = new Bot(token);
-const CHANNEL_USERNAME = '@sllvvv088'; 
+const CHANNEL_USERNAME = process.env.CHANNEL_USERNAME || '@nigina_influence'; 
 
 // Connect to DB
 connectToDatabase();
