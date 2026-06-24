@@ -6,7 +6,8 @@ const token = process.env.BOT_TOKEN;
 if (!token) throw new Error('BOT_TOKEN is unset');
 
 export const bot = new Bot(token);
-const CHANNEL_USERNAME = process.env.CHANNEL_USERNAME || '@nigina_influence'; 
+const CHANNEL_ID = process.env.CHANNEL_ID || '@nigina_influence'; 
+const CHANNEL_LINK = process.env.CHANNEL_LINK || 'https://t.me/+isBY4MeyoylkZDMy';
 
 // Connect to DB
 connectToDatabase();
@@ -20,7 +21,7 @@ async function getUserLanguage(userId: number): Promise<string> {
 
 async function checkSubscription(userId: number): Promise<boolean> {
     try {
-        const member = await bot.api.getChatMember(CHANNEL_USERNAME, userId);
+        const member = await bot.api.getChatMember(CHANNEL_ID, userId);
         return ['creator', 'administrator', 'member'].includes(member.status);
     } catch (error) {
         console.error('Subscription check failed:', error);
@@ -118,7 +119,7 @@ async function handleSubscriptionCheck(ctx: any, userId: number, lang: string) {
     } else {
         // Ask to Subscribe
         const keyboard = new InlineKeyboard()
-            .url(t('btn_subscribe', lang), `https://t.me/${CHANNEL_USERNAME.replace('@', '')}`)
+            .url(t('btn_subscribe', lang), CHANNEL_LINK)
             .row()
             .text(t('btn_check_sub', lang), 'check_subscription');
 
