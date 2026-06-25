@@ -16,12 +16,12 @@ const TRANSLATIONS = {
         btn_check_sub: '✅ Я подписалась',
         not_subscribed: '❌ Вы еще не подписались на канал.',
         sub_confirmed: '✅ Подписка подтверждена!',
-        welcome_message: `Привет! Я Нигина Мумин — твой проводник в мир успешных запусков и высоких доходов на своем блоге!
+        welcome_message: `Привет! Я Нигина Мумин — твой проводник в мир успешного блогинга и высоких доходов через Инстаграм!
 
 Если ты хочешь:
 ✨ Монетизировать свои знания и навыки
 ✨ Создать стабильный источник дохода через Инстаграм
-✨ Научиться делать запуски легко и в удовольствие
+✨ Выстроить сильный личный бренд и легко привлекать клиентов
 
 То ты в правильном месте! 
 
@@ -41,12 +41,12 @@ const TRANSLATIONS = {
         btn_check_sub: '✅ Obuna bo\'ldim',
         not_subscribed: '❌ Siz hali kanalga obuna bo\'lmadingiz.',
         sub_confirmed: '✅ Obuna tasdiqlandi!',
-        welcome_message: `Salom! Men Nigina Mo'min — sizning blogingizda muvaffaqiyatli ishga tushirishlar va yuqori daromadlar olamiga yo'lboshchingizman!
+        welcome_message: `Salom! Men Nigina Mo'min — sizning Instagram blogingiz orqali muvaffaqiyat va yuqori daromadlar olamiga yo'lboshchingizman!
 
 Agar siz:
 ✨ Bilim va ko'nikmalaringizni monetizatsiya qilishni
 ✨ Instagram orqali barqaror daromad manbaini yaratishni
-✨ Oson va zavq bilan ishga tushirishlarni o'rganishni istasangiz
+✨ Kuchli shaxsiy brend yaratishni va mijozlarni oson jalb qilishni istasangiz
 
 Siz to'g'ri joydasiz!
 
@@ -66,12 +66,12 @@ Uni oxirigacha ko'ring, u yerda men intensiv qanday ishlashini va u kimga mos ke
         btn_check_sub: '✅ I have subscribed',
         not_subscribed: '❌ You have not subscribed to the channel yet.',
         sub_confirmed: '✅ Subscription confirmed!',
-        welcome_message: `Hello! I am Nigina Mumin — your guide to the world of successful launches and high incomes on your blog!
+        welcome_message: `Hello! I am Nigina Mumin — your guide to the world of successful blogging and high incomes through Instagram!
 
 If you want to:
 ✨ Monetize your knowledge and skills
 ✨ Create a stable source of income through Instagram
-✨ Learn how to do launches easily and with pleasure
+✨ Build a strong personal brand and easily attract clients
 
 Then you are in the right place!
 
