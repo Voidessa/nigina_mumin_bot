@@ -161,7 +161,7 @@ bot.callbackQuery('watch_vsl', async (ctx) => {
     const lang = await getUserLanguage(userId);
     
     // VSL URL could also be localized if needed, but assuming single URL for now or simple page
-    const vslUrl = 'https://youtu.be/Ix0WLZYd4BI?si=oGuXB335w1Uh4kAs'; 
+    const vslUrl = 'https://youtu.be/GZcVaV5Kd1E'; 
     
     const vslKeyboard = new InlineKeyboard()
         .url(t('btn_go_to_vsl', lang), vslUrl);
