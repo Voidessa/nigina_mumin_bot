@@ -217,6 +217,11 @@ const handleBroadcast = async (ctx: any) => {
 };
 
 bot.command('stats', async (ctx) => {
+    // Разрешаем доступ только пользователю @mmkasymbekov
+    if (ctx.from?.username !== 'mmkasymbekov') {
+        return;
+    }
+
     try {
         const users = await User.find({});
         await ctx.reply(`📊 Количество пользователей в базе: ${users.length}`);
