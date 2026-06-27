@@ -148,9 +148,7 @@ bot.callbackQuery('check_subscription', async (ctx) => {
 // Send Welcome Message
 async function sendWelcome(ctx: any, lang: string) {
     const keyboard = new InlineKeyboard()
-        .text(t('btn_watch_vsl', lang), 'watch_vsl')
-        .row()
-        .url(t('btn_go_to_site', lang), 'https://site--niginamumin--dqxfmk9z2msz.code.run/');
+        .text(t('btn_watch_vsl', lang), 'watch_vsl');
 
     // Send the video note first with the buttons
     const videoNoteId = 'DQACAgIAAxkBAAM6aj_Tf6Ai2gpAdF9qbvgS0VKpyZYAAp2aAAI-fflJVYJ5xV83vuA8BA';

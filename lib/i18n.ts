@@ -25,9 +25,8 @@ const TRANSLATIONS = {
 
 То ты в правильном месте! 
 
-Нажми на кнопки ниже, чтобы посмотреть бесплатный отрывок интенсива по заработку на своем блоге в Инстаграм или перейти на мой сайт, чтобы узнать подробнее.`,
+Нажми на кнопку ниже, чтобы посмотреть бесплатный отрывок интенсива по заработку на своем блоге в Инстаграм.`,
         btn_watch_vsl: '🎬 Посмотреть бесплатный отрывок',
-        btn_go_to_site: '🌐 Перейти на сайт',
         vsl_link_text: `Нажми на кнопку ниже — тебя перебросит на страницу с видео.
         
 Посмотри его до конца, там я объясняю, как работает интенсив и для кого он вообще подходит.`,
@@ -50,9 +49,8 @@ Agar siz:
 
 Siz to'g'ri joydasiz!
 
-Instagram blogingizda pul ishlash bo'yicha intensivning bepul qismini ko'rish yoki batafsil ma'lumot olish uchun saytimga o'tish uchun quyidagi tugmalarni bosing.`,
+Instagram blogingizda pul ishlash bo'yicha intensivning bepul qismini ko'rish uchun quyidagi tugmani bosing.`,
         btn_watch_vsl: '🎬 Bepul qismni ko\'rish',
-        btn_go_to_site: '🌐 Saytga o\'tish',
         vsl_link_text: `Pastdagi tugmani bosing — sizni video sahifasiga o'tkazadi.
         
 Uni oxirigacha ko'ring, u yerda men intensiv qanday ishlashini va u kimga mos kelishini tushuntiraman.`,
@@ -75,9 +73,8 @@ If you want to:
 
 Then you are in the right place!
 
-Click the buttons below to watch a free excerpt of the intensive on making money on your Instagram blog or go to my website to learn more.`,
+Click the button below to watch a free excerpt of the intensive on making money on your Instagram blog.`,
         btn_watch_vsl: '🎬 Watch free excerpt',
-        btn_go_to_site: '🌐 Go to website',
         vsl_link_text: `Click the button below — it will take you to the video page.
         
 Watch it to the end, there I explain how the intensive works and who it is suitable for.`,
