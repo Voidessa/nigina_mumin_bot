@@ -152,12 +152,12 @@ async function sendWelcome(ctx: any, lang: string) {
         .row()
         .url(t('btn_go_to_site', lang), 'https://site--niginamumin--dqxfmk9z2msz.code.run/');
 
-    // Send the text message first (without buttons)
-    await ctx.reply(t('welcome_message', lang), { parse_mode: 'Markdown' });
-    
-    // Then send the video note with the buttons
+    // Send the video note first with the buttons
     const videoNoteId = 'DQACAgIAAxkBAAM6aj_Tf6Ai2gpAdF9qbvgS0VKpyZYAAp2aAAI-fflJVYJ5xV83vuA8BA';
     await ctx.replyWithVideoNote(videoNoteId, { reply_markup: keyboard });
+
+    // Then send the text message with the duplicated buttons
+    await ctx.reply(t('welcome_message', lang), { parse_mode: 'Markdown', reply_markup: keyboard });
 }
 
 // Callback: Watch VSL
