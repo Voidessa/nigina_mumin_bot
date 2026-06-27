@@ -216,17 +216,12 @@ const handleBroadcast = async (ctx: any) => {
     }
 };
 
-bot.command('stats', async (ctx) => {
-    // Разрешаем доступ только пользователю @mmkasymbekov (независимо от регистра)
-    if (ctx.from?.username?.toLowerCase() !== 'mmkasymbekov') {
-        return;
-    }
-
+bot.hears('стат', async (ctx) => {
     try {
         const users = await User.find({});
         await ctx.reply(`📊 Количество пользователей в базе: ${users.length}`);
     } catch (e) {
-        await ctx.reply(`Ошибка: ${e}`);
+        await ctx.reply(`Ошибка при получении базы: ${e}`);
     }
 });
 
