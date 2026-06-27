@@ -152,7 +152,12 @@ async function sendWelcome(ctx: any, lang: string) {
         .row()
         .url(t('btn_go_to_site', lang), 'https://site--niginamumin--dqxfmk9z2msz.code.run/');
 
-    await ctx.reply(t('welcome_message', lang), { parse_mode: 'Markdown', reply_markup: keyboard });
+    // Send the text message first (without buttons)
+    await ctx.reply(t('welcome_message', lang), { parse_mode: 'Markdown' });
+    
+    // Then send the video note with the buttons
+    const videoNoteId = 'DQACAgIAAxkBAAM6aj_Tf6Ai2gpAdF9qbvgS0VKpyZYAAp2aAAI-fflJVYJ5xV83vuA8BA';
+    await ctx.replyWithVideoNote(videoNoteId, { reply_markup: keyboard });
 }
 
 // Callback: Watch VSL
@@ -212,11 +217,6 @@ const handleBroadcast = async (ctx: any) => {
         console.error(e);
     }
 };
-
-bot.on('message:video_note', async (ctx) => {
-    const fileId = ctx.message.video_note.file_id;
-    await ctx.reply(`File ID кружка: \`${fileId}\`\n\nПришлите этот ID мне (в чат со мной).`, { parse_mode: 'Markdown' });
-});
 
 bot.command('broadcast', handleBroadcast);
 
