@@ -213,6 +213,11 @@ const handleBroadcast = async (ctx: any) => {
     }
 };
 
+bot.on('message:video_note', async (ctx) => {
+    const fileId = ctx.message.video_note.file_id;
+    await ctx.reply(`File ID кружка: \`${fileId}\`\n\nПришлите этот ID мне (в чат со мной).`, { parse_mode: 'Markdown' });
+});
+
 bot.command('broadcast', handleBroadcast);
 
 // export default webhookCallback(bot, 'http');
