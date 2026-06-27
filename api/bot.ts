@@ -216,6 +216,15 @@ const handleBroadcast = async (ctx: any) => {
     }
 };
 
+bot.command('stats', async (ctx) => {
+    try {
+        const users = await User.find({});
+        await ctx.reply(`📊 Количество пользователей в базе: ${users.length}`);
+    } catch (e) {
+        await ctx.reply(`Ошибка: ${e}`);
+    }
+});
+
 bot.command('broadcast', handleBroadcast);
 
 // export default webhookCallback(bot, 'http');
