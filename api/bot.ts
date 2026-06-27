@@ -217,8 +217,8 @@ const handleBroadcast = async (ctx: any) => {
 };
 
 bot.command('stats', async (ctx) => {
-    // Разрешаем доступ только пользователю @mmkasymbekov
-    if (ctx.from?.username !== 'mmkasymbekov') {
+    // Разрешаем доступ только пользователю @mmkasymbekov (независимо от регистра)
+    if (ctx.from?.username?.toLowerCase() !== 'mmkasymbekov') {
         return;
     }
 
